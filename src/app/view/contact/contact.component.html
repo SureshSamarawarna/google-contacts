@@ -1,0 +1,16 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Telephone Number</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let connection of connections">
+    <ng-container *ngIf="connection.names && connection.phoneNumbers">
+      <td>{{connection.names[0].displayName}}</td>
+      <td>{{connection.phoneNumbers[0].value}}</td>
+    </ng-container>
+  </tr>
+  </tbody>
+</table>
